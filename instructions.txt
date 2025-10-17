@@ -1,0 +1,8 @@
+1. The data in the input Excel File has to be in the first worksheet to the left.
+2. Obligatory column names in the input file (not case-sensitive): "AO_ID", "Vor-Ort-Begehung-am", "Meter Tiefbau geplant", "Meter Tiefbau gebaut", "GF_AP", "Command Import", "Faserweg dokumentiert".
+3. If values in both "Command Import" and "Faserweg dokumentiert" columns are equal to "ja" (not case-sensitive), the row is copied to the output.
+4. Column names in the output file: "AO_ID", "Vor-Ort-Begehung-am", "Baustatus NE3", "Meter Tiefbau geplant", "Meter Tiefbau gebaut", "GF_AP".
+5. Values in the "Baustatus NE3" column are set to "Faserweg dokumentiert" by default.
+6. "Vor-Ort-Begehung-am" dates are set to DD.MM.YYYY format if possible.
+7. When the program completes, a pop-up window will display the results and any errors encountered.
+8. Output file is exported to the same folder as the input file and its name is set to "Import_BST_{input_filename}" with a "_2", "_3" and so on at the end, if the file already exists.
