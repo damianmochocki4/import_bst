@@ -1,9 +1,14 @@
 1. The data in the input Excel File has to be in the first worksheet to the left.
-2. Obligatory column names in the input file (not case-sensitive): "AO_ID", "Vor-Ort-Begehung-am", "Meter Tiefbau geplant", "Meter Tiefbau gebaut", "GF_AP", "Command Import", "Faserweg dokumentiert".
-3. If values in both "Command Import" and "Faserweg dokumentiert" columns are equal to "ja" (not case-sensitive), the row is copied to the output.
-4. Column names in the output file: "AO_ID", "Vor-Ort-Begehung-am", "Baustatus NE3", "Meter Tiefbau geplant", "Meter Tiefbau gebaut", "GF_AP".
-5. Values in the "Baustatus NE3" column are set to "Faserweg dokumentiert" by default.
-6. "Vor-Ort-Begehung-am" dates are set to DD.MM.YYYY format if possible.
-7. Empty cells are marked in red.
-8. When the program completes, a pop-up window will display the results and any errors encountered.
-9. Output file is exported to the same folder as the input file and its name is set to "Import_BST_{input_filename}" with a "_2", "_3" and so on at the end, if the file already exists.
+2. Obligatory column names in the input file (not case-sensitive): "AO_ID", "Vor-Ort-Begehung-am", "Meter Tiefbau geplant", "Meter Tiefbau gebaut", "GF_AP", "Plausicheck N-PS", "Eingang Korrektur", "Command Import", "Faserweg dokumentiert".
+3. Rows are copied under condition that:
+- "Plausicheck N-PS" or "Eingang Korrektur" equals "ok",
+- "Command Import" is "ja",
+- "Faserweg dokumentiert" is not "ja".
+4. If "Import Table BST" column does not exist in the input file, it is created between "Command Import" and "Faserweg dokumentiert" columns.
+5. In the "Import Table BST" column, there is "ja" inserted for each row that is copied (meaning it meets the conditions in point 3).
+6. Column names in the output file: "AO_ID", "Vor-Ort-Begehung-am", "Baustatus NE3", "Meter Tiefbau geplant", "Meter Tiefbau gebaut", "GF_AP".
+7. Values in the "Baustatus NE3" column are set to "Faserweg dokumentiert" by default.
+8. "Vor-Ort-Begehung-am" dates are set to DD.MM.YYYY format if possible.
+9. Empty cells are marked in red.
+10. When the program completes, a pop-up window will display the results and any errors encountered.
+11. Output file is exported to the same folder as the input file and its name is set to "Import_BST_{input_filename}" with a "_2", "_3" and so on at the end, if the file already exists.
