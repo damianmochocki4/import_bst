@@ -5,7 +5,7 @@
 - "Command Import" is "ja",
 - "Faserweg dokumentiert" is not "ja".
 4. If "Import Table BST" column does not exist in the input file, it is created between "Command Import" and "Faserweg dokumentiert" columns.
-5. In the "Import Table BST" column, there is "ja" inserted for each row that is copied (meaning it meets the conditions in point 3).
+5. In the "Import Table BST" column, there is "ja" inserted for each row that is copied (meaning the conditions in point 3 are met).
 6. Column names in the output file: "AO_ID", "Vor-Ort-Begehung-am", "Baustatus NE3", "Meter Tiefbau geplant", "Meter Tiefbau gebaut", "GF_AP".
 7. Values in the "Baustatus NE3" column are set to "Faserweg dokumentiert" by default.
 8. "Vor-Ort-Begehung-am" dates are set to DD.MM.YYYY format if possible.
